@@ -54,7 +54,7 @@ const team = [
         punti_fatti : 0,
         falli_subiti : 0
     },
-]
+];
 
 console.log(team);
 
@@ -76,3 +76,33 @@ team.forEach((elem) => {
     falli_subiti_team.push(falli_subiti);
 });
 console.log(name_team, falli_subiti_team);
+
+
+/*****
+    SNACK 3
+*****/
+
+
+// Creo un array di oggetti rappresentanti articoli di moda
+const article = [
+    {
+        articleName : 'Poppy',
+        type : 'tshirt',
+        color : 'red'
+    },
+    {
+        articleName : 'Jumping',
+        type : 'occhiali',
+        color : 'blue'
+    },
+    {
+        articleName : 'CrissCross',
+        type : 'scarpe',
+        color : 'black'
+    },
+    {
+        articleName : 'Jenny',
+        type : 'borsa',
+        color : 'pink'
+    }
+];
