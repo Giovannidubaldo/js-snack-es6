@@ -35,22 +35,22 @@ let bikes = [
 // Creo un array di squadre di calcio
 const team = [
     {
-        nome : 'Roma',
+        name : 'Roma',
         punti_fatti : 0,
         falli_subiti : 0
     },
     {
-        nome : 'Napoli',
+        name : 'Napoli',
         punti_fatti : 0,
         falli_subiti : 0
     },
     {
-        nome : 'Inter',
+        name : 'Inter',
         punti_fatti : 0,
         falli_subiti : 0
     },
     {
-        nome : 'Juventus',
+        name : 'Juventus',
         punti_fatti : 0,
         falli_subiti : 0
     },
@@ -58,14 +58,21 @@ const team = [
 
 console.log(team);
 
+// Definisco i due array
+let name_team = [];
+let falli_subiti_team = [];
+
 // Ciclo l'array di squadre
 team.forEach((elem) => {
     // Genero casualmente i punti fatti dalle squadre
-    elem.punti_fatti = Math.floor(Math.random() * 100 + 1)
-    console.log(elem.punti_fatti)
+    elem.punti_fatti = Math.floor(Math.random() * 100 + 1);
 
     // Genero casualmente i falli subiti dalle squadre
-    elem.falli_subiti = Math.floor(Math.random() * 500 + 1)
-    console.log(elem.falli_subiti)
+    elem.falli_subiti = Math.floor(Math.random() * 500 + 1);
 
-})
+    // Uso la destrutturazione per riempire i due array dichiarati
+    const {name, falli_subiti} = elem;
+    name_team.push(name);
+    falli_subiti_team.push(falli_subiti);
+});
+console.log(name_team, falli_subiti_team);
