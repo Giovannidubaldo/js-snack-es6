@@ -137,16 +137,17 @@ console.log(article);
 
 // Funzione che genera lettere random
 function randomLetter(){
-    let alphabet = 'abcdefghijklmnopqrstuvwxyz';
-    let letter = alphabet[randomNumber(0, alphabet.lenght - 1)];
+    let alphabet = ['abcdefghijklmnopqrstuvwxyz'];
+    let letter = alphabet[randomNumber(0, alphabet.length - 1)];
 
     return letter;
 }
 
-// Definisco un nuovo array
-const newArticle = [];
-
 // Ciclo l'array di artcoli di moda
-article.forEach((elem) => {
-    
+const newArticle = article.map((elem) => {
+    let obj = {...elem, position: randomLetter};
+
+    return obj;
 })
+
+console.log(newArticle);
