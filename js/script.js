@@ -26,6 +26,16 @@ let bikes = [
     }
 ];
 
+// Considero il peso della prima bici come il minore per metterlo a confronto con gli altri pesi
+let bici_min = bikes[0];
+
+// Ciclo l'array di bici
+bikes.forEach((elem) => {
+    // Confronto i due pesi
+    if(elem.peso < bici_min.peso){
+        bici_min = elem;
+    }
+});
 
 /*****
     SNACK 2
