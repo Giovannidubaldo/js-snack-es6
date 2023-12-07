@@ -37,6 +37,13 @@ bikes.forEach((elem) => {
     }
 });
 
+// Uso destructuring per stampare il peso minore
+let {nome, peso} = bici_min;
+let result = `La bici più leggera è ${nome} e pesa ${peso}`
+console.log(result);
+
+
+
 /*****
     SNACK 2
 *****/
@@ -95,9 +102,11 @@ team.forEach((elem) => {
 console.log(newTeam);
 
 
+
 /*****
     SNACK 3
 *****/
+
 
 
 // Creo un array di oggetti rappresentanti articoli di moda
