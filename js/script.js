@@ -58,24 +58,31 @@ const team = [
 
 console.log(team);
 
-// Definisco i due array
-let name_team = [];
-let falli_subiti_team = [];
+// Creo una funzione che mi genera un numero compreso tra un valore minimo e massimo
+function randomNumber(min,max){
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// Definisco il nuovo array
+let newTeam = [];
 
 // Ciclo l'array di squadre
 team.forEach((elem) => {
     // Genero casualmente i punti fatti dalle squadre
-    elem.punti_fatti = Math.floor(Math.random() * 100 + 1);
+    elem.punti_fatti = randomNumber(20, 100);
 
     // Genero casualmente i falli subiti dalle squadre
-    elem.falli_subiti = Math.floor(Math.random() * 500 + 1);
+    elem.falli_subiti = randomNumber(100, 200);
 
-    // Uso la destrutturazione per riempire i due array dichiarati
+    // Uso la destrutturazione per riempire l'array dichiarato
     const {name, falli_subiti} = elem;
-    name_team.push(name);
-    falli_subiti_team.push(falli_subiti);
+
+    let teams = {name, falli_subiti};
+
+    newTeam.push(teams);
 });
-console.log(name_team, falli_subiti_team);
+
+console.log(newTeam);
 
 
 /*****
@@ -106,3 +113,13 @@ const article = [
         color : 'pink'
     }
 ];
+
+console.log(article);
+
+// Definisco un nuovo array
+const newArticle = [];
+
+// Ciclo l'array di artcoli di moda
+article.forEach((elem) => {
+    
+})
