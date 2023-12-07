@@ -135,6 +135,14 @@ const article = [
 
 console.log(article);
 
+// Funzione che genera lettere random
+function randomLetter(){
+    let alphabet = 'abcdefghijklmnopqrstuvwxyz';
+    let letter = alphabet[randomNumber(0, alphabet.lenght - 1)];
+
+    return letter;
+}
+
 // Definisco un nuovo array
 const newArticle = [];
 
